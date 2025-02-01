@@ -1,0 +1,315 @@
+body{
+margin: 0%;
+padding: 0%;
+background-color: black;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+color: white; }
+
+/* Main Container */
+.main-div {
+    width: 100%;
+    height: 2000vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    background: linear-gradient(135deg, #1e1c21, #21262d);
+    animation: gradientShift 10s ease infinite;
+}
+
+/* Gradient Background Animation */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Navbar Styling */
+.navbar {
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    left: 0;
+    height: 8vh;
+    width: 97%;
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(59, 34, 34, 0.294);
+    backdrop-filter: blur(10px);
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Name Styling */
+.name1 {
+    margin-left: 10px;
+    font-size: 2rem;
+    font-weight: 700;
+    color:white; /* Purple color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+    transition: color 0.3s ease;
+}
+
+.name1:hover {
+    color: #2575fc; /* Blue color on hover */
+}
+/* Navigation Links */
+.parts {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-link {
+    font-size: 19px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffdd57;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Button Styling */
+.btn1 {
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6a11cb;
+    background: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn1:hover {
+    background: #ffdd57;
+    color: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start invisible */
+        transform: translateY(0); /* Start 50px below */
+    }
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translateY(50px); /* Move to original position */
+    }
+}
+
+
+/* Home Section Styling */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 10%;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    animation: gradientShift 10s ease infinite;
+    color: #fff;
+    height: 100vh;
+
+}
+
+/* Gradient Background Animation */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Content Styling */
+.content {
+
+    width: 70%;
+    animation: slideInLeft 1s ease-in-out;
+    margin-bottom: 0px;
+}
+/* Hi Text Styling */
+.hi {
+    font-size: 2.5rem; /* Increased font size */
+    font-weight: 600;
+    color: #333;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px; /* Space between text and emoji */
+}
+
+/* Handshake Emoji Animation */
+.hi::after {
+    content: "👋"; /* Handshake emoji */
+    display: inline-block;
+    animation: shake 1.5s infinite; /* Infinite shaking animation */
+}
+
+/* Shake Animation */
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(15deg); }
+    20% { transform: rotate(-15deg); }
+    30% { transform: rotate(10deg); }
+    40% { transform: rotate(-10deg); }
+    50% { transform: rotate(5deg); }
+    60% { transform: rotate(-5deg); }
+    70% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.roles {
+    margin-bottom: 30px;
+}
+
+.roles h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 10px 0;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.roles h3:nth-child(1) { animation-delay: 0.5s; }
+.roles h3:nth-child(2) { animation-delay: 1s; }
+.roles h3:nth-child(3) { animation-delay: 1.5s; }
+.roles h3:nth-child(4) { animation-delay: 2s; }
+.roles h3:nth-child(5) { animation-delay: 2.5s; }
+
+/* Typing Animation */
+h3 {
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Vertically center the spans */
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.am {
+    margin-right: 10px; /* Add spacing between "I am a" and the typing text */
+}
+
+.typing {
+    color: #ffdd57;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #ffdd57;
+    animation: typing 3s steps(20, end)infinite, blink-caret 0.75s;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 62%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #ffdd57; }
+}
+
+/* Fade-In Up Animation */
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+
+/* Paragraph Styling */
+.para {
+    font-family: 'Poppins', sans-serif; /* Clean and modern font */
+    font-size: 1.1rem; /* Slightly larger font size */
+    line-height: 1.8; /* Improved readability */
+   
+    padding: 20px; /* Inner spacing */
+    border-radius: 10px; /* Rounded corners */
+  
+  
+    max-width: 600px; /* Limit width for better readability */
+  margin-bottom: 40px;
+    margin-left: -27px;
+}
+
+
+/* Download Button Styling */
+.download-btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6a11cb;
+    background: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  
+}
+
+.download-btn:hover {
+    background: #ffdd57;
+    color: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Styling */
+/* Image Container Styling */
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
+  
+    margin-bottom: 0px;
+}
+
+/* Image Styling */
+.image img {
+    margin-left: 150px;
+    margin-right: -50px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; /* Rounded corners */
+    border: 5px solid #fff; /* White border */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover Effect */
+.image img:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .image img {
+        max-width: 80%; /* Smaller image on smaller screens */
+    }
+}
