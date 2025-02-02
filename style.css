@@ -208,7 +208,7 @@ h3 {
 }
 
 .typing {
-    color: #ffdd57;
+    color: #ffdd57;                  
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
