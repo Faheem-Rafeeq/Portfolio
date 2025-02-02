@@ -1,22 +1,23 @@
-body{
-margin: 0%;
-padding: 0%;
-background-color: black;
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-color: white; }
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* Main Container */
+body {
+    background-color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
 .main-div {
     width: 100%;
-    height: 2000vh;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+    height: 100vh;
     background: linear-gradient(135deg, #1e1c21, #21262d);
     animation: gradientShift 10s ease infinite;
 }
 
-/* Gradient Background Animation */
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -25,42 +26,42 @@ color: white; }
 
 /* Navbar Styling */
 .navbar {
-    position: fixed; /* Fix the navbar at the top */
+    position: fixed;
     top: 0;
     left: 0;
-    height: 8vh;
-    width: 97%;
-   display: flex;
+    width: 100%;
+    height: 12vh;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     background: rgba(59, 34, 34, 0.294);
     backdrop-filter: blur(10px);
-   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     animation: fadeIn 1.5s ease-in-out;
+    z-index: 1000;
 }
 
-/* Name Styling */
 .name1 {
     margin-left: 10px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    color:white; /* Purple color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     transition: color 0.3s ease;
 }
 
 .name1:hover {
-    color: #2575fc; /* Blue color on hover */
+    color: #2575fc;
 }
-/* Navigation Links */
+
 .parts {
     display: flex;
-    gap: 40px;
+    gap: 20px;
 }
 
 .nav-link {
-    font-size: 19px;
+    font-size: 1rem;
     font-weight: 500;
     color: #fff;
     cursor: pointer;
@@ -87,10 +88,9 @@ color: white; }
     width: 100%;
 }
 
-/* Button Styling */
 .btn1 {
-    padding: 10px 25px;
-    font-size: 1rem;
+    padding: 8px 20px;
+    font-size: 0.9rem;
     font-weight: 600;
     color: #6a11cb;
     background: #fff;
@@ -107,63 +107,48 @@ color: white; }
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
-@keyframes fadeIn {
-    from {
-        opacity: 0; /* Start invisible */
-        transform: translateY(0); /* Start 50px below */
-    }
-    to {
-        opacity: 1; /* Fully visible */
-        transform: translateY(50px); /* Move to original position */
-    }
-}
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(0); }
+    to { opacity: 1; transform: translateY(50px); }
+}
 
 /* Home Section Styling */
 .home {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
     padding: 50px 10%;
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     animation: gradientShift 10s ease infinite;
     color: #fff;
     height: 100vh;
-
+    text-align: center;
+   
 }
 
-/* Gradient Background Animation */
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Content Styling */
 .content {
-
-    width: 70%;
+    width: 100%;
     animation: slideInLeft 1s ease-in-out;
-    margin-bottom: 0px;
+  
 }
-/* Hi Text Styling */
+
 .hi {
-    font-size: 2.5rem; /* Increased font size */
+    font-size: 2rem;
     font-weight: 600;
     color: #333;
     display: inline-flex;
     align-items: center;
-    gap: 10px; /* Space between text and emoji */
+    gap: 10px;
 }
 
-/* Handshake Emoji Animation */
 .hi::after {
-    content: "👋"; /* Handshake emoji */
+    content: "👋";
     display: inline-block;
-    animation: shake 1.5s infinite; /* Infinite shaking animation */
+    animation: shake 1.5s infinite;
 }
 
-/* Shake Animation */
 @keyframes shake {
     0% { transform: rotate(0deg); }
     10% { transform: rotate(15deg); }
@@ -177,13 +162,13 @@ color: white; }
 }
 
 .roles {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .roles h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    margin: 10px 0;
+    margin-right: 10px 0;
     opacity: 0;
     animation: fadeInUp 1s ease-in-out forwards;
 }
@@ -194,31 +179,31 @@ color: white; }
 .roles h3:nth-child(4) { animation-delay: 2s; }
 .roles h3:nth-child(5) { animation-delay: 2.5s; }
 
-/* Typing Animation */
 h3 {
-    display: flex; /* Use flexbox to align items */
-    align-items: center; /* Vertically center the spans */
-    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
     font-weight: 700;
     margin: 10px 0;
 }
 
 .am {
-    margin-right: 10px; /* Add spacing between "I am a" and the typing text */
+    margin-right: 10px;
 }
 
 .typing {
-    color: #ffdd57;                  
+    max-width: 39%;
+    color: #ffdd57;
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
     border-right: 3px solid #ffdd57;
-    animation: typing 3s steps(20, end)infinite, blink-caret 0.75s;
+    animation: typing 3s steps(20, end) infinite, blink-caret 0.75s;
 }
 
 @keyframes typing {
     from { width: 0; }
-    to { width: 62%; }
+    to { width: 100%; }
 }
 
 @keyframes blink-caret {
@@ -226,32 +211,24 @@ h3 {
     50% { border-color: #ffdd57; }
 }
 
-/* Fade-In Up Animation */
 @keyframes fadeInUp {
     from { transform: translateY(20px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
 
-
-/* Paragraph Styling */
 .para {
-    font-family: 'Poppins', sans-serif; /* Clean and modern font */
-    font-size: 1.1rem; /* Slightly larger font size */
-    line-height: 1.8; /* Improved readability */
-   
-    padding: 20px; /* Inner spacing */
-    border-radius: 10px; /* Rounded corners */
-  
-  
-    max-width: 600px; /* Limit width for better readability */
-  margin-bottom: 40px;
-    margin-left: -27px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin-bottom: 20px;
+    margin-left: -40px;
 }
 
-
-/* Download Button Styling */
 .download-btn {
-    padding: 12px 30px;
+    padding: 10px 25px;
     font-size: 1rem;
     font-weight: 600;
     color: #6a11cb;
@@ -261,7 +238,6 @@ h3 {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  
 }
 
 .download-btn:hover {
@@ -271,37 +247,30 @@ h3 {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Image Styling */
-/* Image Container Styling */
 .image {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
-  
-    margin-bottom: 0px;
+    animation: fadeIn 1.5s ease-in-out;
+    margin-bottom: 0;
 }
 
-/* Image Styling */
 .image img {
-    margin-left: 150px;
-    margin-right: -50px;
     max-width: 100%;
     height: auto;
-    border-radius: 50%; /* Rounded corners */
-    border: 5px solid #fff; /* White border */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
 }
 
-/* Hover Effect */
 .image img:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
-/* Fade-In Animation */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -309,7 +278,172 @@ h3 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .image img {
-        max-width: 80%; /* Smaller image on smaller screens */
+    .navbar {
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+         
     }
+
+    .name1 {
+        font-size: 1.2rem;
+    }
+
+    .parts {
+        gap: 10px;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .btn1 {
+        padding: 6px 15px;
+        font-size: 0.8rem;
+    }
+
+    .home {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .hi {
+        margin-top: 19px;
+        font-size: 1.5rem;
+    }
+
+    .roles h3 {
+        font-size: 1.2rem;
+        margin-left: 10px;
+
+    }
+    .typing{
+        max-width: 44%;
+    }
+
+    .para {
+        font-size: 0.9rem;
+        padding: 10px;
+        margin-left: 10px;
+    }
+
+    .download-btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+
+    .image img {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .name1 {
+        margin-bottom: 10px;
+    }
+
+    .parts {
+        flex-direction: row;
+        gap: 14px;
+    }
+
+    .btn1 {
+        margin-top: 16px;
+    }
+
+    .home {
+        padding: 10px;
+    }
+
+    .hi {
+        font-size: 1.2rem;
+    }
+
+    .roles h3 {
+        font-size: 1rem;
+    }
+
+    .para {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+
+    .download-btn {
+        padding: 6px 15px;
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+/* about me component */
+
+/* General Styles */
+
+
+.about-sec {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-sec h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #dfe5eb;
+}
+.para2{
+    font-size: 20px;
+}
+
+.paragraph {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: justify;
+    line-height: 1.8;
+    color:white;
+    opacity: 85%;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.images-box {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 120px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.images-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.images-box img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.images-box h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin: 0;
 }
