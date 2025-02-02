@@ -38,7 +38,7 @@ body {
     background: rgba(59, 34, 34, 0.294);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 1.5s ease-in-out;
+    animation: slideInFromTop 1.5s ease-in-out;
     z-index: 1000;
 }
 
@@ -129,6 +129,7 @@ body {
 }
 
 .content {
+    margin-top: 100px;
     width: 100%;
     animation: slideInLeft 1s ease-in-out;
   
@@ -254,6 +255,8 @@ h3 {
     padding: 20px;
     animation: fadeIn 1.5s ease-in-out;
     margin-bottom: 0;
+    margin-top: 100px;
+   
 }
 
 .image img {
@@ -388,21 +391,23 @@ h3 {
 
 /* about me component */
 
-/* General Styles */
-
-
 .about-sec {
     padding: 50px 20px;
     text-align: center;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .about-sec h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #dfe5eb;
+    animation: slideInFromTop 1.5s ease-out;
+
 }
 .para2{
-    font-size: 20px;
+    font-size: 17.6px;
+    word-spacing:-2px ;
+    animation: fadeInText 1.5s ease-out forwards;
 }
 
 .paragraph {
@@ -419,6 +424,7 @@ h3 {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .images-box {
@@ -446,4 +452,181 @@ h3 {
     font-size: 1.2rem;
     color: #2c3e50;
     margin: 0;
+} 
+
+
+
+/* General Reset */
+
+
+
+
+
+
+
+
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+/* 
+projects sec */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+/* Global Styles */
+
+
+/* Project Section */
+.projects {
+    margin-top: 50px;
+    padding: 50px 0;
+    background-color: #261717;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #333;
+    align-items: center;
+}
+
+/* Project Image Boxes */
+.proj-image {
+    max-height: 100px;
+    max-width: 20%;
+    background-color: #9db3c9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proj-image:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Images */
+.proj-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Project Title */
+.proj-image h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* Button Styling */
+button {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    margin: 10px 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 500;
+}
+
+button i {
+    margin-right: 8px;
+}
+
+/* Button Hover Effects */
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Code button specific styles */
+button.code {
+    background-color: #2c3e50;
+}
+
+button.code:hover {
+    background-color: #34495e;
+}
+
+/* Demo button specific styles */
+button.demo {
+    background-color: #16a085;
+}
+
+button.demo:hover {
+    background-color: #1abc9c;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .projects {
+        padding: 30px 15px;
+    }
+
+    .proj-image {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .proj-image img {
+        height: 150px;
+    }
+
+    .proj-image h3 {
+        font-size: 1.3rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
 }
