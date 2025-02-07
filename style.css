@@ -323,7 +323,9 @@ h3 {
     .typing{
         max-width: 60%;
     }   
-
+.content{
+    margin-top: 125px;
+}
     .para {
         font-size: 0.9rem;
         padding: 10px;
@@ -333,12 +335,12 @@ h3 {
     .download-btn {
         padding: 8px 20px;
         font-size: 0.9rem;
+        margin-top: -10px;
     }
 
     .image img {
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 20px;
+    
+        margin-top: -95px;
     }
 }
 
@@ -362,9 +364,7 @@ h3 {
         margin-top: 16px;
     }
 
-    .home {
-        padding: 10px;
-    }
+   
 
     .hi {
         font-size: 1.2rem;
